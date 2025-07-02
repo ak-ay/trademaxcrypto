@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .modern-button {
+    @apply relative overflow-hidden px-8 py-4 font-bold text-white transition-all duration-300 transform hover:scale-105 active:scale-95 rounded-lg;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    box-shadow: 
+      0 4px 15px rgba(99, 102, 241, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .modern-button:hover {
+    box-shadow: 
+      0 8px 25px rgba(99, 102, 241, 0.6),
+      0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
+  
+  .modern-card {
+    @apply relative p-6 rounded-xl transition-all duration-300 transform hover:scale-105;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+  
+  .modern-card:hover {
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(99, 102, 241, 0.2);
+  }
+  
+  .modern-ticker {
+    @apply flex items-center space-x-8 py-4 px-6 bg-surface rounded-xl;
+    box-shadow: 
+      0 4px 20px rgba(0, 0, 0, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+  
+  .floating-shape {
+    @apply absolute opacity-10 animate-float;
+    pointer-events: none;
+  }
+  
+  .neon-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+} 
