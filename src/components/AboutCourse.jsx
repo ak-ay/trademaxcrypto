@@ -118,7 +118,7 @@ const AboutCourse = () => {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919999999999"
+        href="https://wa.me/919895822500"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
